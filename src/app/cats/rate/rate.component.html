@@ -1,0 +1,39 @@
+<loader [isLoading]="(isLoading$ | async) === true"></loader>
+
+<div *ngIf="(isLoading$ | async) === false" class="card draw" [class.show-indicator]="showIndicator$ | async">
+	<!--img src="/assets/loader.gif" class="d-none loader card-img-top"-->
+	<ng-container *ngIf="cat$ | async as cat">
+		<img [src]="cat?.image" class="card-img-top">
+		<div class="card-body">
+			<h5 class="card-title">{{cat?.title}}</h5>
+			<p class="card-text"><small class="text-muted">{{cat?.date | date}}</small></p>
+			<form [formGroup]="form" class="vote-form d-flex justify-content-end">
+				<!-- Replace <div> bellow with custom formControl (Task 2.2) -->
+				<div>
+					<input id="dislike" hidden type="radio" formControlName="rating" [value]="0"/>
+					<label for="dislike">
+			  <span>
+				<fa-icon [icon]="dislikeIcon" [size]="'2x'" class="me-3"></fa-icon>
+			  </span>
+					</label>
+
+					<input id="neutral" hidden type="radio" formControlName="rating" [value]="2.5"/>
+					<label for="neutral">
+			  <span>
+				<fa-icon [icon]="neutralIcon" [size]="'2x'" class="me-3"></fa-icon>
+			  </span>
+					</label>
+
+					<input id="like" hidden type="radio" formControlName="rating" [value]="5"/>
+					<label for="like">
+			  <span>
+				<fa-icon [icon]="likeIcon" [size]="'2x'" class="me-3"></fa-icon>
+			  </span>
+					</label>
+				</div>
+			</form>
+		</div>
+	</ng-container>
+
+	<span class="delay-indicator"></span>
+</div>

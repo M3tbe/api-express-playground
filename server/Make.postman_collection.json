@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "fdf6d263-8ca5-4c96-85c6-3fc1957c725b",
+		"name": "Make",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17523998"
+	},
+	"item": [
+		{
+			"name": "hello",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "VALID_API_KEY_1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:4300/",
+					"host": [
+						"localhost"
+					],
+					"port": "4300",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ping",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "VALID_API_KEY_1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:4300/api/ping",
+					"host": [
+						"localhost"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "One random",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "VALID_API_KEY_1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:4300/api/cats/random",
+					"host": [
+						"localhost"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"cats",
+						"random"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All cats",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "VALID_API_KEY_1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:4300/api/cats/",
+					"host": [
+						"localhost"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"cats",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Cat By id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "VALID_API_KEY_1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:4300/api/cats/jpbnoe3UIa8TU8LM13",
+					"host": [
+						"localhost"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"cats",
+						"jpbnoe3UIa8TU8LM13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rate cat example",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "VALID_API_KEY_1",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:4300/api/cats/jpbnoe3UIa8TU8LM13/rate/2",
+					"host": [
+						"localhost"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"cats",
+						"jpbnoe3UIa8TU8LM13",
+						"rate",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "VALID_API_KEY_1",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Capybara",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/Users/mvandecasteele/Downloads/capybara.jpg"
+						},
+						{
+							"key": "name",
+							"value": "Hedgehog",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/Users/mvandecasteele/Downloads/hedgehog.jpg"
+						},
+						{
+							"key": "name",
+							"value": "Horse",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/Users/mvandecasteele/Downloads/horse.jpg"
+						},
+						{
+							"key": "name",
+							"value": "Dogo",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/Users/mvandecasteele/Downloads/dogo.jpeg"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:4300/api/upload",
+					"host": [
+						"localhost"
+					],
+					"port": "4300",
+					"path": [
+						"api",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
